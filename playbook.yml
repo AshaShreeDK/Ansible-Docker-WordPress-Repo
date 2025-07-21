@@ -1,0 +1,22 @@
+- name: Automated WordPress Deployment via Docker Compose
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Install Docker Compose (latest release)
+      get_url:
+        url: https://github.com/docker/compose/releases/latest/download/docker-compose-Linux-x86_64
+        dest: /usr/local/bin/docker-compose
+        mode: '0755'
+
+    - name: Copy Docker Compose file
+      copy:
+        src: docker-compose.yml
+        dest: /home/ec2-user/docker-compose.yml
+        mode: '0644'
+
+    - name: Run Docker Compose up
+      shell: docker-compose up -d
+      args:
+        chdir: /home/ec2-user/
+
