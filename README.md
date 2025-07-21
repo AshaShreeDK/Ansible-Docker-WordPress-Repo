@@ -18,12 +18,11 @@ The setup was implemented and tested on **Amazon Linux 2023**.
 ## 🚀 Project Structure
 
 Ansible-Docker-WordPress-Repo/
-├── Ansible+Docker_WordPress.jpg   # 📸 Screenshot of WordPress setup
-├── docker-compose.yml             # Docker Compose file for WP + MySQL
-├── inventory                      # Ansible inventory file (localhost)
-├── playbook.yml                   # Ansible automation playbook
-└── README.md                      # This documentation
-
+├── Ansible+Docker_WordPress.jpg   
+├── docker-compose.yml             
+├── inventory                      
+├── playbook.yml                   
+└── README.md                      
 
 ---
 
